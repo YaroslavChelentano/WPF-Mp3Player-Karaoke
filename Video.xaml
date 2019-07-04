@@ -1,0 +1,86 @@
+﻿<Window x:Class="MusicCollection.Video"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicCollection"
+        mc:Ignorable="d"
+Title="Audio" Height="600" Width="1200" WindowStartupLocation="CenterScreen">
+    <Grid RenderTransformOrigin="0,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="Back.png"/>
+        </Grid.Background>
+        <Label Content="Devises" HorizontalAlignment="Left" Margin="12,9,0,0" VerticalAlignment="Top" Height="31" Width="278" Background="#FFD0901B" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.014"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <DataGrid x:Name="dgvDevises" HorizontalAlignment="Left" Height="121" Margin="10,43,0,0" VerticalAlignment="Top" Width="282" ItemsSource="{Binding}" Background="#FF1D0B1B" BorderBrush="{x:Null}" Foreground="#FF090707"/>
+        <Button x:Name="SelectKaraoke" Content="SelectKaraoke" HorizontalAlignment="Left" Height="33" Margin="10,336,0,0" VerticalAlignment="Top" Width="129"   Background="#FF855D16" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="SelectKaraoke_Click"/>
+        <Label Content="VideoID" HorizontalAlignment="Left" Margin="10,381,0,0" VerticalAlignment="Top" Height="29" Width="206" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF4B2146"/>
+        <TextBox x:Name="txtVideoID" HorizontalAlignment="Left" Height="29" Margin="253,381,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Foreground="#FFF6F0F0" SelectionBrush="{x:Null}" Background="#FF4B2146" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="ArtistID" HorizontalAlignment="Left" Margin="10,415,0,0" VerticalAlignment="Top" Height="29" Width="206" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF4B2146"/>
+        <TextBox x:Name="txtArtistID" HorizontalAlignment="Left" Height="29" Margin="253,415,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Foreground="#FFF6F0F0" SelectionBrush="{x:Null}" Background="#FF4B2146" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="VideoName" HorizontalAlignment="Left" Margin="10,448,0,0" VerticalAlignment="Top" Height="31" Width="206" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF4B2146"/>
+        <TextBox x:Name="txtVideoName" HorizontalAlignment="Left" Height="31" Margin="253,448,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Foreground="#FFF6F0F0" SelectionBrush="{x:Null}" Background="#FF4B2146" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="VideoDuration" HorizontalAlignment="Left" Margin="10,483,0,0" VerticalAlignment="Top" Height="30" Width="206" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF4B2146"/>
+        <TextBox x:Name="txtVideoDuration" HorizontalAlignment="Left" Height="30" Margin="253,483,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Foreground="#FFF6F0F0" SelectionBrush="{x:Null}" Background="#FF4B2146" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="Update" Content="Update" HorizontalAlignment="Left" Height="31" Margin="466,381,0,0" VerticalAlignment="Top" Width="128"   Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA"/>
+        <Button x:Name="Delete" Content="Delete" HorizontalAlignment="Left" Height="31" Margin="466,427,0,0" VerticalAlignment="Top" Width="128"   Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA"/>
+        <Button x:Name="Insert" Content="Insert" HorizontalAlignment="Left" Height="31" Margin="466,474,0,0" VerticalAlignment="Top" Width="128"   Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA"/>
+        <Button Content="-&gt;" HorizontalAlignment="Left" Height="31" Margin="466,515,0,0" VerticalAlignment="Top" Width="128"   Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="CountVideo" Content="CountVideo" HorizontalAlignment="Left" Height="31" Margin="620,515,0,0" VerticalAlignment="Top" Width="128" Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="CountVideo_Click"/>
+        <Button x:Name="Back" Content="Back" HorizontalAlignment="Left" Height="31" Margin="1065,515,0,0" VerticalAlignment="Top" Width="99"   Background="#FFD3B379" BorderBrush="#FFF6EEEE" Foreground="#FF1D0B1B" FontWeight="Bold" Click="Back_Click"/>
+        <Label Content="Karaoke" HorizontalAlignment="Left" Margin="12,165,0,0" VerticalAlignment="Top" Height="31" Width="278" Background="#FFD0901B" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.014"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <DataGrid x:Name="dgvKaraoke" HorizontalAlignment="Left" Height="121" Margin="10,199,0,0" VerticalAlignment="Top" Width="282" Background="#FF1D0B1B" BorderBrush="{x:Null}" Foreground="#FF090505"/>
+        <Button x:Name="SelectDevises" Content="SelectDevises" HorizontalAlignment="Left" Height="33" Margin="164,334,0,0" VerticalAlignment="Top" Width="128"   Background="#FF855D16" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="SelectDevises_Click"/>
+        <Label Content="Video" HorizontalAlignment="Left" Margin="314,9,0,0" VerticalAlignment="Top" Height="31" Width="278" Background="#FFD0901B" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.014"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <DataGrid x:Name="dgvVideo" HorizontalAlignment="Left" Height="121" Margin="312,43,0,0" VerticalAlignment="Top" Width="282" ItemsSource="{Binding}" Background="#FF1D0B1B" BorderBrush="{x:Null}" Foreground="#FF140808"/>
+        <Label Content="Learn" HorizontalAlignment="Left" Margin="314,165,0,0" VerticalAlignment="Top" Height="31" Width="278" Background="#FFD0901B" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.014"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <DataGrid x:Name="dgvLearn" HorizontalAlignment="Left" Height="121" Margin="312,199,0,0" VerticalAlignment="Top" Width="282" ItemsSource="{Binding}" Background="#FF1D0B1B" BorderBrush="{x:Null}" Foreground="#FF0F0A0A"/>
+        <Button x:Name="SelectLearn" Content="SelectLearn" HorizontalAlignment="Left" Height="33" Margin="312,334,0,0" VerticalAlignment="Top" Width="129"   Background="#FF855D16" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="SelectLearn_Click"/>
+        <Button x:Name="SelectVideo" Content="SelectVideo" HorizontalAlignment="Left" Height="33" Margin="466,334,0,0" VerticalAlignment="Top" Width="128"   Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="SelectVideo_Click"/>
+        <Label Name="lblStatus" Content="Not playing..." HorizontalContentAlignment="Center" Margin="669,43,78,157" />
+        <Button x:Name="NumerateKaraoke" Content="NumerateKaraoke" HorizontalAlignment="Left" Height="31" Margin="620,474,0,0" VerticalAlignment="Top" Width="128" Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="NumerateKaraoke_Click" />
+        <MediaElement Name="mePlayer" LoadedBehavior="Manual"  
+                  Source="D:\MusicCollection\Пирожков.mp4" Margin="620,12,29.6,112.4" />
+        <Label Content="VideoPath" HorizontalAlignment="Left" Margin="10,516,0,0" VerticalAlignment="Top" Height="30" Width="206" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF4B2146"/>
+        <TextBox x:Name="txtVideoPath" HorizontalAlignment="Left" Height="30" Margin="253,516,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Foreground="#FFF6F0F0" SelectionBrush="{x:Null}" Background="#FF4B2146" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="Play" Content="Play" HorizontalAlignment="Left" Height="31" Margin="847,474,0,0" VerticalAlignment="Top" Width="85" Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="btnPlay_Click" />
+        <Button x:Name="Stop" Content="Stop" HorizontalAlignment="Left" Height="31" Margin="962,474,0,0" VerticalAlignment="Top" Width="78" Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="btnStop_Click" />
+        <Button x:Name="Pause" Content="Pause" HorizontalAlignment="Left" Height="31" Margin="1065,474,0,0" VerticalAlignment="Top" Width="78" Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="btnPause_Click" />
+
+    </Grid>
+</Window>

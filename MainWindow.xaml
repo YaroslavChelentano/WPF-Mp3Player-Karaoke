@@ -1,0 +1,74 @@
+﻿<Window x:Class="MusicCollection.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicCollection"
+        mc:Ignorable="d"
+Title="Audio" Height="600" Width="1200" WindowStartupLocation="CenterScreen">
+    <Grid RenderTransformOrigin="0,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="Back.png"/>
+        </Grid.Background>
+        <Label Content="Artist" HorizontalAlignment="Left" Margin="23,30,0,0" VerticalAlignment="Top" Height="31" Width="278" Background="#FFD0901B" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.014"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <DataGrid x:Name="dgvArtist" HorizontalAlignment="Left" Height="177" Margin="21,64,0,0" VerticalAlignment="Top" Width="282" ItemsSource="{Binding}" Background="#FF1D0B1B" BorderBrush="{x:Null}" Foreground="Black"/>
+        <Button x:Name="SelectArtist" Content="SelectArtist" HorizontalAlignment="Left" Height="33" Margin="21,246,0,0" VerticalAlignment="Top" Width="282"   Background="#FF855D16" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="SelectArtist_Click"/>
+        <Label Content="Album" HorizontalAlignment="Left" Margin="23,290,0,0" VerticalAlignment="Top" Height="31" Width="278" Background="#FFD0901B" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.014"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <DataGrid x:Name="dgvAlbum" HorizontalAlignment="Left" Height="177" Margin="21,324,0,0" VerticalAlignment="Top" Width="282" ItemsSource="{Binding}" Background="#FF1D0B1B" BorderBrush="{x:Null}" Foreground="Black"/>
+        <Button x:Name="SelectAlbum" Content="SelectAlbum" HorizontalAlignment="Left" Height="33" Margin="21,506,0,0" VerticalAlignment="Top" Width="282"   Background="#FF855D16" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="SelectAlbum_Click"/>
+        <DataGrid x:Name="dgvAudio" HorizontalAlignment="Left" Height="177" Margin="349,64,0,0" VerticalAlignment="Top" Width="816" ItemsSource="{Binding}" Background="#FF1D0B1B" FontWeight="Bold" BorderBrush="{x:Null}" Foreground="Black"/>
+        <Label Content="Audio" HorizontalAlignment="Left" Margin="350,30,0,0" VerticalAlignment="Top" Height="31" Width="818" Background="#FFD0901B" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.014"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="AlbumID" HorizontalAlignment="Left" Margin="349,289,0,0" VerticalAlignment="Top" Height="31" Width="175" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF4B2146"/>
+        <TextBox x:Name="txtAlbumID" HorizontalAlignment="Left" Height="31" Margin="554,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Foreground="#FFF6F0F0" SelectionBrush="{x:Null}" Background="#FF4B2146" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="ArtistID" HorizontalAlignment="Left" Margin="349,336,0,0" VerticalAlignment="Top" Height="31" Width="173" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF4B2146"/>
+        <TextBox x:Name="txtArtistID" HorizontalAlignment="Left" Height="31" Margin="554,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Foreground="#FFF6F0F0" SelectionBrush="{x:Null}" Background="#FF4B2146" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="349,382,0,0" VerticalAlignment="Top" Height="31" Width="168" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF4B2146"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="31" Margin="554,382,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Foreground="#FFF6F0F0" SelectionBrush="{x:Null}" Background="#FF4B2146" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Duration" HorizontalAlignment="Left" Margin="349,429,0,0" VerticalAlignment="Top" Height="31" Width="168" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF4B2146"/>
+        <TextBox x:Name="txtDuration" HorizontalAlignment="Left" Height="31" Margin="554,429,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Foreground="#FFF6F0F0" SelectionBrush="{x:Null}" Background="#FF4B2146" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Path" HorizontalAlignment="Left" Margin="349,470,0,0" VerticalAlignment="Top" Height="31" Width="168" Foreground="#FFFAF4F4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF4B2146"/>
+        <TextBox x:Name="txtPath" HorizontalAlignment="Left" Height="31" Margin="554,470,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Foreground="#FFF6F0F0" SelectionBrush="{x:Null}" Background="#FF4B2146" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="Play" Content="Play" HorizontalAlignment="Left" Height="31" Margin="942,289,0,0" VerticalAlignment="Top" Width="99"  Background="#FF65295E" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="Play_Click"/>
+        <Button x:Name="Select" Content="Select" HorizontalAlignment="Left" Height="31" Margin="774,289,0,0" VerticalAlignment="Top" Width="145"   Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="Select_Click"/>
+        <Button x:Name="Update" Content="Update" HorizontalAlignment="Left" Height="31" Margin="774,336,0,0" VerticalAlignment="Top" Width="145"   Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="Update_Click"/>
+        <Button x:Name="Delete" Content="Delete" HorizontalAlignment="Left" Height="31" Margin="774,382,0,0" VerticalAlignment="Top" Width="145"   Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="Delete_Click"/>
+        <Button x:Name="Insert" Content="Insert" HorizontalAlignment="Left" Height="31" Margin="774,429,0,0" VerticalAlignment="Top" Width="145"   Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="Insert_Click"/>
+        <Button Content="-&gt;" HorizontalAlignment="Left" Height="31" Margin="774,470,0,0" VerticalAlignment="Top" Width="145"   Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="Transaction" Content="Transaction" HorizontalAlignment="Left" Height="31" Margin="942,336,0,0" VerticalAlignment="Top" Width="223" Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="Transaction_Click"/>
+        <Button x:Name="Video" Content="Entertainment" HorizontalAlignment="Left" Height="31" Margin="1066,470,0,0" VerticalAlignment="Top" Width="99"   Background="#FFD3B379" BorderBrush="#FFF6EEEE" Foreground="#FF1D0B1B" FontWeight="Bold" Click="Video_Click"/>
+        <Button Content="1" HorizontalAlignment="Left" Height="31" Margin="942,246,0,0" VerticalAlignment="Top" Width="55"   Background="#FF216F3B" BorderBrush="#FFF6EEEE" Foreground="#FFF6F1F5" Click="Button_Click"/>
+        <Button Content="2" HorizontalAlignment="Left" Height="31" Margin="1026,246,0,0" VerticalAlignment="Top" Width="55"   Background="#FF216F3B" BorderBrush="#FFF6EEEE" Foreground="#FFF6F1F5" Click="Button_Click_1"/>
+        <Button Content="3" HorizontalAlignment="Left" Height="31" Margin="1110,246,0,0" VerticalAlignment="Top" Width="55"   Background="#FF216F3B" BorderBrush="#FFF6EEEE" Foreground="#FFF6F1F5" Click="Button_Click_2"/>
+        <Button x:Name="Stop" Content="Stop" HorizontalAlignment="Left" Height="31" Margin="1066,289,0,0" VerticalAlignment="Top" Width="99"  Background="#FF65295E" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="Stop_Click"/>
+        <Button x:Name="Transaction_Copy" Content="Transaction2" HorizontalAlignment="Left" Height="31" Margin="942,382,0,0" VerticalAlignment="Top" Width="223" Background="#FFA95322" BorderBrush="#FFF6EEEE" Foreground="#FFFAFAFA" Click="Transaction_Copy_Click" />
+
+
+    </Grid>
+</Window>
